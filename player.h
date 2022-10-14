@@ -1,6 +1,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <stdlib.h>
+#include <string>
 
 float generateStat(float aFloat = 1)
 {
@@ -67,6 +68,9 @@ public:
     float pitching,
     BatSpecialty wildCard,
     );
+
+    string generateName(std::string firstNamePath = "./dictionaries/firstname.dct", std::string lastNamePath = "./dictionaries/lastname.dct");
+    //void generateInjury();
 
 }
 #endif

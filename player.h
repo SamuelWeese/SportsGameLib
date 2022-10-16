@@ -42,7 +42,7 @@ public:
     float injuryChance;
     float hitting;
     float position;
-    float resistTackle;
+    float tackle;
     float catching;
     float pitching;
     WildCard quirk;
@@ -53,7 +53,7 @@ public:
          this->injuryChance = generateStat();
          this->hitting = generateStat();
          this->position = generateStat();
-         this->resistTackle = generateStat();
+         this->tackle = generateStat();
          this->catching = generateStat();
          this->pitching = generateStat();
          this->quirk = generateSpecialty();
@@ -63,7 +63,7 @@ public:
     float injuryChance,
     float hitting,
     float position,
-    float resistTackle,
+    float tackle,
     float catching,
     float pitching,
     BatSpecialty wildCard,

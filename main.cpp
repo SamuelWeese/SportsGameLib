@@ -13,6 +13,7 @@ void generateTimeToBat(player *pitcher, player *lineMan)
 {
 
 }
+*/
 float generateAtBat(player *batter, player *pitcher)
 {
     int batterDice = 0;
@@ -22,13 +23,11 @@ float generateAtBat(player *batter, player *pitcher)
         batterDice += 20;
         pitcherDice += 10;
     }
-    if (diceRoll(pitcher->pitching, pitcherDice) > diceRoll(batter->hitting, batterDice))
-    {
-
-    }
+    float pitchScore = diceRoll(pitcher->pitching, pitcherDice) - diceRoll(batter->hitting, batterDice);
+    return pitchScore;
 
 }
-*/
+
 bool playGame(team &a, team &b) // team a always goes first
 {
     unsigned short team_a_score = 0;

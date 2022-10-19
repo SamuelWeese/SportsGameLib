@@ -8,12 +8,18 @@ float diceRoll(float modifier, int maxRoll = 20)
 {
     return rand() % maxRoll * modifier;
 }
-/*
-void generateTimeToBat(player *pitcher, player *lineMan)
-{
 
+
+bool generateBlock(player *blocker, player *tackler)
+{
+    if (diceRoll(blocker->tackle) > diceRoll(tackler->tackle)) return true;
+    return false;
 }
-*/
+float generateTimeToBat(player *pitcher, player *lineMan)
+{
+    return 0;
+}
+
 float generateAtBat(player *batter, player *pitcher)
 {
     int batterDice = 0;
@@ -25,7 +31,6 @@ float generateAtBat(player *batter, player *pitcher)
     }
     float pitchScore = diceRoll(pitcher->pitching, pitcherDice) - diceRoll(batter->hitting, batterDice);
     return pitchScore;
-
 }
 
 bool playGame(team &a, team &b) // team a always goes first
